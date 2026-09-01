@@ -75,14 +75,37 @@
         </div>
     </section>
 
-    <!-- 料金プランセクション -->
+        <!-- 料金プランセクション -->
     <section id="plans" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-4">シンプルで明朗な料金プラン</h2>
-            <p class="text-center text-gray-600 mb-12">用途に合わせて選べる3つのミニマムプラン</p>
-            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+            <p class="text-center text-gray-600 mb-8">用途に合わせて選べるミニマムプラン（左右にスクロールできます）</p>
+
+            <!-- 横スクロールコンテナ -->
+            <div class="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory scrollbar-thin">
+                
+                <!-- Free Plan (Coming Soon) -->
+                <div class="min-w-[280px] sm:min-w-[320px] bg-gray-50 rounded-2xl p-8 border border-dashed border-gray-300 flex flex-col justify-between snap-center relative opacity-75">
+                    <span class="absolute top-4 right-4 bg-gray-200 text-gray-700 text-xs font-bold px-2.5 py-1 rounded-full">Coming Soon</span>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">🫘</span>
+                            <h3 class="text-xl font-bold text-gray-500">Free</h3>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-6">完全無料のお試しプラン</p>
+                        <div class="text-4xl font-extrabold mb-6 text-gray-400">¥0<span class="text-sm font-normal">/月</span></div>
+                        <ul class="space-y-3 text-sm text-gray-400 mb-8">
+                            <li><i class="fa-solid fa-memory mr-2"></i>256MB RAM</li>
+                            <li><i class="fa-solid fa-microchip mr-2"></i>0.5コア CPU</li>
+                            <li><i class="fa-solid fa-hard-drive mr-2"></i>500MB ストレージ</li>
+                            <li><i class="fa-solid fa-users mr-2"></i>コミュニティサポート</li>
+                        </ul>
+                    </div>
+                    <button disabled class="block w-full text-center bg-gray-200 text-gray-500 font-bold py-3 rounded-xl cursor-not-allowed">準備中</button>
+                </div>
+
                 <!-- Lite Plan -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-200 flex flex-col justify-between">
+                <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-2xl p-8 border border-gray-200 flex flex-col justify-between snap-center shadow-sm">
                     <div>
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xl">🫛</span>
@@ -100,8 +123,8 @@
                     <a href="#" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 rounded-xl transition">選択する</a>
                 </div>
 
-                <!-- Basic Plan -->
-                <div class="bg-white rounded-2xl p-8 border-2 border-emerald-500 shadow-xl relative flex flex-col justify-between">
+                <!-- Basic Plan (おすすめ) -->
+                <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-2xl p-8 border-2 border-emerald-500 shadow-xl relative flex flex-col justify-between snap-center">
                     <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">おすすめ</span>
                     <div>
                         <div class="flex items-center gap-2 mb-2">
@@ -121,7 +144,7 @@
                 </div>
 
                 <!-- Plus Plan -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-200 flex flex-col justify-between">
+                <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-2xl p-8 border border-gray-200 flex flex-col justify-between snap-center shadow-sm">
                     <div>
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-xl">🌾</span>
@@ -139,9 +162,11 @@
                     </div>
                     <a href="#" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 rounded-xl transition">選択する</a>
                 </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- フッター -->
     <footer class="bg-gray-900 text-gray-400 py-8">
